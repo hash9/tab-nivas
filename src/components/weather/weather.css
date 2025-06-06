@@ -1,0 +1,66 @@
+:root {
+  --weather-size: 25vmin;
+  --weatherface-color: #ffecc9;
+}
+
+.weather-widget {
+	position: relative;
+	overflow: hidden;
+	background-color: #ffecc9;
+	width: var(--weather-size);
+	height: var(--weather-size);
+	border-radius: 15%;
+}
+
+.weather-row-one {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: calc(var(--weather-size) * 0.10);
+}
+
+.weather-icon {
+	position: relative;
+	height: calc(var(--weather-size) * 0.199);
+	width: calc(var(--weather-size) * 0.199);
+}
+
+.location {
+	position: relative;
+	text-align: right;
+	font-family: "Sans", sans-serif;
+	font-size: calc(var(--weather-size) * 0.096);
+	margin: 0;
+  	font-weight: bold;
+}
+
+.weather-row-two {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.temperature {
+	position: relative;
+	text-align: left;
+  	font-family: "Sans", sans-serif;
+	font-weight: bold;
+	margin: 0;
+	font-size: calc(var(--weather-size) * 0.310);
+	padding-left: calc(var(--weather-size) * 0.10);
+}
+
+.temperature-desc {
+	position: relative;
+	text-align: left;
+	font-family: "Sans", sans-serif;
+	margin: 0;
+	font-weight: bold;
+	font-size: calc(var(--weather-size) * 0.096);
+	padding-left: calc(var(--weather-size) * 0.10);
+}
+
+
+
+

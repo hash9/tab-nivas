@@ -1,0 +1,200 @@
+:root {
+  --clock-size: 25vmin;
+  --date-color: #3d2f21;
+  --face-color: #ffecc9;
+  --hour-color: #564128;
+  --minute-color: #874e05;
+  --second-color: #515d3b;
+}
+
+.clock {
+  position: relative;
+  overflow: hidden;
+  width: var(--clock-size);
+  height: var(--clock-size);
+  /* margin: 5rem auto; */
+  transform: rotate(5deg);
+  background: radial-gradient(circle at center, var(--face-color) 55%, transparent 0);
+}
+
+.clock > .edge {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  left: 0;
+  width: 20%;
+  height: 20%;
+  margin: auto;
+  border-radius: 20%;
+  background: #ffecc9;
+}
+
+.clock > .edge:nth-child(1) {
+  transform: rotate(0deg) translateY(-202%) rotate(60deg) skewY(-36deg);
+}
+
+.clock > .edge:nth-child(2) {
+  transform: rotate(30deg) translateY(-202%) rotate(60deg) skewY(-36deg);
+}
+
+.clock > .edge:nth-child(3) {
+  transform: rotate(60deg) translateY(-202%) rotate(60deg) skewY(-36deg);
+}
+
+.clock > .edge:nth-child(4) {
+  transform: rotate(90deg) translateY(-202%) rotate(60deg) skewY(-36deg);
+}
+
+.clock > .edge:nth-child(5) {
+  transform: rotate(120deg) translateY(-202%) rotate(60deg) skewY(-36deg);
+}
+
+.clock > .edge:nth-child(6) {
+  transform: rotate(150deg) translateY(-202%) rotate(60deg) skewY(-36deg);
+}
+
+.clock > .edge:nth-child(7) {
+  transform: rotate(180deg) translateY(-202%) rotate(60deg) skewY(-36deg);
+}
+
+.clock > .edge:nth-child(8) {
+  transform: rotate(210deg) translateY(-202%) rotate(60deg) skewY(-36deg);
+}
+
+.clock > .edge:nth-child(9) {
+  transform: rotate(240deg) translateY(-202%) rotate(60deg) skewY(-36deg);
+}
+
+.clock > .edge:nth-child(10) {
+  transform: rotate(270deg) translateY(-202%) rotate(60deg) skewY(-36deg);
+}
+
+.clock > .edge:nth-child(11) {
+  transform: rotate(300deg) translateY(-202%) rotate(60deg) skewY(-36deg);
+}
+
+.clock > .edge:nth-child(12) {
+  transform: rotate(330deg) translateY(-202%) rotate(60deg) skewY(-36deg);
+}
+
+.clock > .hand {
+  position: absolute;
+  top: 46.4%;
+  right: 0;
+  left: 0;
+  width: 7.25%;
+  margin: auto;
+  border-radius: calc(var(--clock-size) * 0.2);
+}
+
+.clock > .hour {
+  height: 28%;
+  transform: rotate(112.5deg);
+  transform-origin: 50% 12.857%;
+  /* animation: 216000s hour-rotate steps(60) infinite; */
+  background: var(--hour-color);
+}
+
+.clock > .minute {
+  height: 35%;
+  transform: rotate(-2.5deg);
+  transform-origin: 50% 10%;
+  /* animation: 3600s minute-rotate steps(60) infinite; */
+  background: var(--minute-color);
+}
+
+@keyframes hour-rotate {
+  0% {
+    transform: rotate(112.5deg);
+  }
+  100% {
+    transform: rotate(472.5deg);
+  }
+}
+
+@keyframes minute-rotate {
+  0% {
+    transform: rotate(-2.5deg);
+  }
+  100% {
+    transform: rotate(357.5deg);
+  }
+}
+
+.clock > .date {
+  font-family: "Sans", sans-serif;
+  font-size: 0;
+  font-size: calc(var(--clock-size) * 0.096);
+  font-weight: 700;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  height: calc(var(--clock-size) * 0.096);
+  margin: auto;
+  transform: translateY(-50%);
+  /* animation: 60s date-rotate linear infinite; */
+  text-align: center;
+  color: var(--date-color);
+}
+
+@keyframes date-rotate {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+.clock > .date > span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.clock > .date > span:nth-child(1) {
+  transform: rotate(22deg) translateY(-382%);
+}
+
+.clock > .date > span:nth-child(2) {
+  transform: rotate(30.5deg) translateY(-382%);
+}
+
+.clock > .date > span:nth-child(3) {
+  transform: rotate(40.5deg) translateY(-382%);
+}
+
+.clock > .date > span:nth-child(4) {
+  transform: rotate(53deg) translateY(-382%);
+}
+
+.clock > .date > span:nth-child(5) {
+  transform: rotate(61.5deg) translateY(-382%);
+}
+
+.clock > .second {
+  position: absolute;
+  top: 45.5%;
+  right: 0;
+  left: 0;
+  width: 9%;
+  height: 9%;
+  margin: auto;
+  transform: rotate(54deg) translateY(420%);
+  /* animation: 60s second-rotate linear infinite; */
+  border-radius: 100%;
+  background: var(--second-color);
+}
+
+@keyframes second-rotate {
+  0% {
+    transform: rotate(40deg) translateY(420%);
+  }
+  100% {
+    transform: rotate(400deg) translateY(420%);
+  }
+}

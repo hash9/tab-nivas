@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "React New Tab Extension",
+  "description": "A Chrome extension with a custom new tab page using React",
+  "version": "1.0",
+  "permissions": ["tabs"],
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ]
+}

@@ -1,0 +1,74 @@
+:root {
+    --weather-size: 25vmin;
+    --weatherface-color: #ffecc9;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+}
+
+.modalContainer {
+	background-color: #ffecc9;
+	width: var(--weather-size);
+	height: var(--weather-size);
+	border-radius: 15%;
+	padding: calc(var(--weather-size) * 0.05);
+}
+
+.title {
+    font-size: calc(var(--weather-size) * 0.096);
+    font-family: "Sans", sans-serif;
+    font-weight: bold;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.todoInput {
+    display: flex;
+    flex-direction: row;
+    flex: 8;
+    border: 0px;
+    border-radius: 20px;
+    height: calc(var(--weather-size) * 0.096);
+    width: calc(var(--weather-size) * 0.096);
+    font-size: calc(var(--weather-size) * 0.096);
+    padding: calc(var(--weather-size) * 0.05);
+    background-color: aqua;
+}
+
+.addButton {
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+    position: absolute;
+    border-radius: 20px;
+    top: 0.5px;
+    right: 5px;
+    cursor: pointer;
+    border: 0px;
+    height: calc(var(--weather-size) * 0.150);
+    width: calc(var(--weather-size) * 0.150);
+    transform: translateY(13%); /* Center vertically */
+}
+
+.addIcon {
+    height: calc(var(--weather-size) * 0.150);
+    width: calc(var(--weather-size) * 0.150);
+}
+
+.listContainer {
+    /* display: flex;
+    flex-direction: row;
+    position: relative;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center; */
+}

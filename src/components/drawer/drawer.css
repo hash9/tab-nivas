@@ -1,0 +1,52 @@
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 500px;
+    height: 100%;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.3s;
+  }
+  
+  .drawer.open {
+    right: 0;
+  }
+  
+  .drawer ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .drawer ul li {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .drawer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .drawer ul li a:hover {
+    color: #f1f1f1;
+  }
+  
+  .drawer-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 30px;
+    background-color: #111;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .drawer-toggle:hover {
+    background-color: #333;
+  }
+  
