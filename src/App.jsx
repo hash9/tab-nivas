@@ -1,15 +1,14 @@
 /*global chrome*/
-import React from 'react';
+import React, { useCallback } from 'react';
 import Clock from "./components/clock";
 import Weather from './components/weather';
-import Drawer from './components/drawer';
 import Todo from './components/todo';
+// import Drawer from './components/drawer';
 
-function App() {
-  const handleClick = () => {
-    // Send a message to the background script to open a new tab
+const App = () => {
+  const handleClick = useCallback(() => {
     chrome.runtime.sendMessage({ action: 'openNewTab' });
-  };
+  }, []);
 
   return (
     <div className="App">
@@ -17,8 +16,10 @@ function App() {
       <Weather />
       <Todo />
       {/* <Drawer /> */}
+      {/* Example button to trigger handleClick */}
+      {/* <button onClick={handleClick}>Open New Tab</button> */}
     </div>
   );
-}
+};
 
 export default App;
